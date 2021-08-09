@@ -18,8 +18,10 @@ $contaCorrente = [
 ];
 
 $contaCorrente['123.456.789-10'] = sacar($contaCorrente['123.456.789-10'], 500);
-$contaCorrente['123.456.789-12'] = Depositar($contaCorrente['123.456.789-12'], 1500);
+$contaCorrente['123.567.891-22'] = depositar($contaCorrente['123.567.891-22'], 10000);
 
-foreach ($contaCorrente as $cpf => $conta) {
-    exibirMensagem($cpf . " " . $conta['titular'] . ' ' . $conta['saldo']);
+
+foreach ($contaCorrente as $cpf => $conta) 
+{
+    exibirMensagem("$cpf $conta[titular] $conta[saldo]");
 }

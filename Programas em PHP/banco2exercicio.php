@@ -1,28 +1,6 @@
 <?php
-function exibirMensagem($mensagem)
-{
-    echo $mensagem . PHP_EOL;
-}
 
-function sacar($conta, $valorASacar)
-{
-    if ($valorASacar > $conta) {
-        exibirMensagem ("Você não pode sacar esse valor."); 
-    } else {
-        $conta['saldo']-= $valorASacar;
-    }
-    return $conta;
-}
-
-function depositar($conta, $valorADepositar)
-{
-    if ($valorADepositar < 0) {
-        exibirMensagem("Você só pode depositar valores positivos."); 
-    } else {
-        $conta['saldo'] += $valorADepositar;
-    }
-    return $conta;
-}
+require_once 'funcoes.php';
 
 $contaCorrente = [
     '123.456.789-10' => [
